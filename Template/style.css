@@ -1,0 +1,347 @@
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+
+:root {
+    --social-font-size: 1.25rem;
+    --header-height: 3rem;
+    --width-nav: 30rem;
+    --transition-time-text: 1s;
+    --transition-time-underline: .75s;
+    --height-underline: 0.1rem;
+    --color-text-underline: #4caf50;
+    --bck-color-header-footer: rgb(31, 31, 31);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #3b3a30;
+}
+
+
+.hmpLink, .fa-fire-extinguisher, .projectA, .projectB, .projectC{
+    text-decoration: none;
+    color: #f0f0f0;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+    position: relative;
+}
+
+/* HEADER */
+
+
+@media screen and (max-width: 900px){
+
+    .header{
+        top: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--bck-color-header-footer);
+        height: var(--header-height);   
+        padding-right: 1rem;
+    }
+
+    .hompage{
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        padding-left: 0.5rem;
+        top: 0;
+        z-index: 1;
+    }
+
+    .nav-right{
+        display: none;
+        list-style: none;
+    }
+    .projectA, .projectB{
+        float: right;
+        list-style: none;
+    }   
+
+    .fa-bars{
+        color: white;
+        position: relative;
+        float: right;
+        top: 0;
+        right: 0;
+    }
+
+    .nav-right-m{
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0.5rem;
+        text-align: center;
+        float: right;
+        width: 40%;
+        display: block;
+        top: 0;
+        right: 0;
+    }
+    
+    .navi-m {
+        position: absolute;
+        float: right;
+        width: 100%;
+        background-color: var(--bck-color-header-footer);
+        display: block;
+        top: var(--header-height);
+        transform: scale(1, 0);
+        transform-origin: top;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .bars{
+        position: relative;
+        float: right;
+    }
+
+    .projectB, .projectA{
+        padding-top: 0.25rem;
+    }
+
+    .nav-toggle {
+        right: 0;
+        display: none;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        padding-right: 1rem;
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+    .nav-toggle:checked ~ .navi-m{
+        display: block;
+        transform: scale(1, 1);
+    }
+}
+
+@media screen and (min-width: 900px){
+    
+    .header{
+        top: 0;
+        right: 0;
+        left: 0;
+        position: absolute;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--bck-color-header-footer);
+        height: var(--header-height);   
+        /* padding: 0 25rem; */
+        grid-template-columns: 1fr auto minmax(50rem, 1fr) 1fr;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+    
+    .nav-right{
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: flex-end;
+        /* height: var(--header-height);
+        width: var(--width-nav); */
+        /* background-color: red; */
+        margin: 0 auto;
+        padding-right: 0.5rem;
+        grid-column: 3 / 4;
+    }
+    
+    
+    .hompage{
+        /* background-color: green; */
+        /* width: var(--width-nav);
+        height: var(--header-height); */
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        padding-left: 0.5rem;
+        grid-column: 2 / 3;
+    }
+
+    .nav-right-m{
+        display: none;
+    }
+
+    .navi-m{
+        display: none;
+    }
+
+    .nav-toggle{
+        display: none;
+    }
+
+    .bars{
+        display: none;
+    }
+}
+
+
+.fa-ethereum{
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.projectA, .projectB, .hmpLink{
+    font-size: 1rem;
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--bck-color-header-footer);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+.split{
+    display: flex;
+}
+
+.copyright{
+    font-size: 0.75rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+}
+
+.fa-twitter, .fa-github, .fa-envelope{
+    font-size: var(--social-font-size);
+    position: absolute;
+}
+
+.twitter{color: #4099FF;}
+
+.github{ color: #333;} 
+
+.mail{ color: #2c7ffc}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin: 1rem 0 2rem 0;
+}
+
+/* HEADER HOVER EFFECT */
+
+.projectA:hover{
+    color: var(--color-text-underline);
+    transition: var(--transition-time-text);
+}
+
+.projectA::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-underline);
+    background-color: var(--color-text-underline);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-time-underline) ease-in;
+}
+
+.projectA:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.projectB:hover{
+    color: var(--color-text-underline);
+    transition: var(--transition-time-text);
+}
+
+.projectB::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-underline);
+    background-color: var(--color-text-underline);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-time-underline) ease-in;
+}
+
+.projectB:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.projectC:hover{
+    color: var(--color-text-underline);
+    transition: var(--transition-time-text);
+}
+
+.projectC::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--height-underline);
+    background-color: var(--color-text-underline);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform var(--transition-time-underline) ease-in;
+}
+
+.projectC:hover::after{
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+.hmpLink:hover{
+    color: var(--color-text-underline);
+    transition: var(--transition-time-text);
+}
+
+.fa-ethereum:hover{
+    color: var(--color-text-underline);
+    transition: var(--transition-time-text);
+}
+
+/* FOOTER HOVER EFFECT */
+
+.twitter:hover{
+    color: #4099ffd0;
+    transition: 0.75s;
+}
+
+.github:hover{
+    color: rgba(51, 51, 51, 0.795);
+    transition: 0.75s;
+}
+
+.mail:hover{
+    color: #2c7ffcce;
+    transition: 0.75s;
+}
+
+

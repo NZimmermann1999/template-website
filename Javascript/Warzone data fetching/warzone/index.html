@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>Warzone data fetch</title>
+</head>
+
+<body>
+    <header>
+        <h2>WARZONE ALL TIME DATA</h2>
+    </header>
+
+    <section>
+        <div class="split">
+            <div>
+                <p>NAME : </p>
+                    <span id="gamertag"> - </span>
+            </div>
+            <div>
+                    <p>LEVEL : </p>
+                    <span id="level"> - </span>
+            </div>
+            <div>
+                    <p>KD RATIO : </p>
+                    <span id="kd"> - </span>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="labels">
+            <p>KILLS : </p>
+            <span id="kills"> - </span>
+        </div>
+        <div>
+            <p>DEATHS : </p>
+            <span id="deaths"> - </span>
+        </div>
+        <div>
+            <p>DOWNS : </p>
+            <span id="downs"> - </span>
+        </div>
+        <div>
+            <p>REVIVES : </p>
+            <span id="revives"> - </span>
+        </div>
+        <div>
+            <p>TOP 25 : </p>
+            <span id="top25"> - </span>
+        </div>
+        <div>
+            <p>TOP 10 : </p>
+            <span id="top10"> - </span>
+        </div>
+        <div>
+            <p>TOP 5 : </p>
+            <span id="top5"> - </span>
+        </div>
+        <div>
+            <p>WINS : </p>
+            <span id="win"> - </span>
+        </div>
+        <div>
+            <p>GAMES : </p>
+            <span id="gamesPlayed"> - </span>
+        </div>
+        <div>
+            <p>TIME PLAYED : </p>
+            <span id="time"> - </span>
+        </div>
+    </section>
+    <input type="button" class="button" id="button" value="GET DATA">
+    <input type="text" class="name_box" id="name">
+    <input type="button" class="platform" id="Battle" value="BATTLE">
+    <input type="button" class="platform" id="PSN" value="PSN">
+    <script src="app.js"></script>
+</body>
+
+</html>
